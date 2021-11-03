@@ -49,3 +49,17 @@ def create_interval(given_date, end):
         interval[future_date_str] = {create_timestamp(future_date_str)}
     # Return the Dicitionary
     return interval
+
+def retrieve_binance_data(interval):
+    'This function retrieves the data from the binance 
+    'servers for a given interval of time'
+    data = []
+    dates = interval.keys()
+    for date in dates:
+        # print(date)
+        timestamp = str(interval[date])
+        .replace("{", "").replace("}", "").replace("'", "")
+        new_data = client
+        .get_historical_klines('BTCUSDT', '1M', timestamp, limit=1000)
+        data = data+new_data
+    return data

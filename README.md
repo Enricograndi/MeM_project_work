@@ -34,11 +34,14 @@ python main.py
 ## Where can I find the data?
 The data will be saved as CSV on "Data" folder. It will present also a plot.
 
+##Data formattation
+
+.....
 
 ## API settings
 
 In order to download the data, you have to create your own account on Binance. Next you will have to generate
-your personal key. Finally, you have to set the keys generated on the function.py in the dedicated variable.
+your personal key. Finally, you have to set the keys generated on the function/function.py in the dedicated variable.
 
 ## Support
 You need help? Get in touch with the authors on [Linkedin](https://www.linkedin.com/)!

@@ -25,3 +25,27 @@ def create_timestamp(date):
     timestamp = str(time.mktime(dtObj.timetuple()) * 1000)[:-2]
     # Return the str timestamp
     return str(timestamp)
+
+def create_interval(given_date, end):
+    'This function creates a new dictionary containing
+    'as key the gregorian value and as value the timestamp'
+    # Create the dictionary object
+    interval = {}
+    # Save the start date
+    interval[given_date] = {create_timestamp(given_date)}
+    # Transform the string in a DataTime object
+    dtObj = datetime.strptime(given_date,
+                              '%m/%d/%Y')
+    # Initialize the for loop to add the days
+    # and create the Dictionaty interval
+    for x in range(end):
+        # start from day 1 (not 0)
+        x += 1
+        # Add one day to the Data Obj
+        future_date = dtObj + relativedelta(days=x)
+        # Transform DataObj to a string
+        future_date_str = future_date.strftime(date_format)
+        # Convert the string into Tinestamp and save it
+        interval[future_date_str] = {create_timestamp(future_date_str)}
+    # Return the Dicitionary
+    return interval

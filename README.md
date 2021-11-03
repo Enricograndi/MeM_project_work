@@ -23,12 +23,6 @@ To read them with your **default browser**, from the main folder use ```$ open d
 **DOCUMENTATION MADE WITH: [Sphinx](http://www.sphinx-doc.org/en/master/).**
 
 
-
-## Command line parameters
-As we have mentioned in the first section, some command line parameters are required in order to run the main script.
-#### Positional arguments
-- **An action is required**: In order to inform the package if to (AUTH)authenticate, (ADD) or to (REMOVE) an user.**Only one** action at time can be passed.
-
 ## How to retrieve data
 
 From the command line, open the package and run main.py

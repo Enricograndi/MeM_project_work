@@ -14,3 +14,14 @@ api_key = os.environ.get(binance_api)
 api_secret = os.environ.get(secrete_key)  # Set account
 client = Client(api_key, api_secret)   # Login
 
+def create_timestamp(date):
+    'This function translate the gregorian
+    'data format into Unix Timestamp usefull to call Binance API'
+    # Remove space and concatenate with second and milliseconds
+    date_string = (date.replace(" ", "") + ", 00:00:00")
+    # Transform the string in a DataTime object
+    dtObj = datetime.strptime(date_string, "%m/%d/%Y, %H:%M:%S")
+    # Transform in Timestamp and remove the last two digits
+    timestamp = str(time.mktime(dtObj.timetuple()) * 1000)[:-2]
+    # Return the str timestamp
+    return str(timestamp)

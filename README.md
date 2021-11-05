@@ -47,6 +47,7 @@ You need help? Get in touch with the authors on [Linkedin](https://www.linkedin.
 Thank you all for the collaboration! Follow the authors on linkedin!
 
 - [**Enrico Grandi**](https://www.linkedin.com/in/enrico-grandi/)
+- [**Martina Crisafulli**] (https://www.linkedin.com/in/martina-crisafulli-58a006209/)
 
 
 

@@ -48,6 +48,7 @@ Thank you all for the collaboration! Follow the authors on linkedin!
 
 - [**Enrico Grandi**](https://www.linkedin.com/in/enrico-grandi/)
 - [**Martina Crisafulli**](https://www.linkedin.com/in/martina-crisafulli-58a006209/)
+- [**Martina Manno**](https://www.linkedin.com/in/martina-manno-41a6a41a2/)
 
 
 

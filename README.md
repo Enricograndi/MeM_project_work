@@ -15,10 +15,6 @@ It also require an account in order to generate the API Key
 ## Documentation 
 Documentation can be found in: ```docs/html/index.html``` and provides infos about the functions you can find in the various modules.
  
-To read them with your **default browser**, from the main folder use ```$ open docs/html/index.html``` or, for other browsers you may have installed, follow these examples:
-- **Chrome:** ```$ open -a "Google Chrome" docs/html/index.html```
-- **Safari:** ```$ open -a "Safari" docs/html/index.html```
-
 
 **DOCUMENTATION MADE WITH: [Sphinx](http://www.sphinx-doc.org/en/master/).**
 
@@ -32,7 +28,7 @@ python main.py
 ```
 
 ## Where can I find the data?
-The data will be saved as CSV on "Data" folder. It will present also a plot.
+The data will be saved as CSV on "Data" folder. 
 
 ## Data explaination
 
@@ -49,7 +45,7 @@ In this documentation there are ten variables and 48652 records which describe t
 - Number of trades:the number of Bitcoins processed on a single day.
 - Taker buy base asset volume:the amount of of traded coins in the timeframe that were received by the buyer.
 - Taker buy quote asset volume:the amount of traded coins in the timeframe paid by the buyer.
-- Ignore:
+- Ignore: Ingore
 
 
 

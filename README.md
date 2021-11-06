@@ -45,10 +45,10 @@ In this documentation there are ten variables and 48652 records which describe t
 - Close:  the value the data acquires at the end of the day
 - Volume: the volume of the transaction 
 - Close time:	the closing interval time that you set when you retrieve data 
-- Quote asset volume:	
-- Number of trades:
-- Taker buy base asset volume:	
-- Taker buy quote asset volume:	
+- Quote asset volume: the quantity that is traded at the quoted price.
+- Number of trades:the number of Bitcoins processed on a single day
+- Taker buy base asset volume:the amount of of traded coins in the timeframe that were received by the buyer
+- Taker buy quote asset volume:the amount of traded coins in the timeframe paid by the buyer
 - Ignore:
 
 

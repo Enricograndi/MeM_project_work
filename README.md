@@ -15,7 +15,9 @@ It also require an account in order to generate the API Key
 ## Documentation 
 Documentation can be found in: ```docs/html/index.html``` and provides infos about the functions you can find in the various modules.
  
-You can read them with your **default browser**.
+To read them with your **default browser**, from the main folder use ```$ open docs/html/index.html``` or, for other browsers you may have installed, follow these examples:
+- **Chrome:** ```$ open -a "Google Chrome" docs/html/index.html```
+- **Safari:** ```$ open -a "Safari" docs/html/index.html```
 
 
 **DOCUMENTATION MADE WITH: [Sphinx](http://www.sphinx-doc.org/en/master/).**
@@ -32,15 +34,17 @@ python main.py
 ## Where can I find the data?
 The data will be saved as CSV on "Data" folder. It will present also a plot.
 
-## Data explenation
+## Data explaination
 
-............
+In this documentation there are ten variables and 48652 records which describe the Bitcoin trend in dollars from August 1, 2017 to October 1, 2021. Data are written in the form of klines, also known as Candlestick, that packs a lot of trade history information into a single data point.
 
-- Open time:	
-- Open	High:	
-- Low	Close:
-- Volume:
-- Close time:	
+- Open time:	the starting interval time that you set when you retrieve data  
+- Open: the value the data acquires at the beginning of the day 
+- High:	the maximum value the data acquires at the beginning of the day
+- Low: the lowest value the data acquires at the beginning of the day
+- Close:  the value the data acquires at the end of the day
+- Volume: the volume of the transaction 
+- Close time:	the closing interval time that you set when you retrieve data 
 - Quote asset volume:	
 - Number of trades:
 - Taker buy base asset volume:	
@@ -52,7 +56,7 @@ The data will be saved as CSV on "Data" folder. It will present also a plot.
 ## API settings
 
 In order to download the data, you have to create your own account on Binance. Next you will have to generate
-your personal key. Finally, you have to set the keys generated on the function.py in the dedicated variables.
+your personal key. Finally, you have to set the keys generated on the function.py in the dedicated variable.
 
 ## Support
 You need help? Get in touch with the authors on [Linkedin](https://www.linkedin.com/)!

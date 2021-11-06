@@ -52,7 +52,7 @@ The data will be saved as CSV on "Data" folder. It will present also a plot.
 ## API settings
 
 In order to download the data, you have to create your own account on Binance. Next you will have to generate
-your personal key. Finally, you have to set the keys generated on the function.py in the dedicated variable.
+your personal key. Finally, you have to set the keys generated on the function.py in the dedicated variables.
 
 ## Support
 You need help? Get in touch with the authors on [Linkedin](https://www.linkedin.com/)!

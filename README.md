@@ -34,6 +34,22 @@ python main.py
 ## Where can I find the data?
 The data will be saved as CSV on "Data" folder. It will present also a plot.
 
+## Data explenation
+
+............
+
+- Open time:	
+- Open	High:	
+- Low	Close:
+- Volume:
+- Close time:	
+- Quote asset volume:	
+- Number of trades:
+- Taker buy base asset volume:	
+- Taker buy quote asset volume:	
+- Ignore:
+
+
 
 ## API settings
 

@@ -1,11 +1,3 @@
-"""
-.. module:: function
-   :synopsis: All function of the project are defined here
-"""
-
-
-
-
 import os
 from binance.client import Client
 import datetime

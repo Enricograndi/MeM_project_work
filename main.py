@@ -1,14 +1,29 @@
-#Import the function of the package
-from MeM_package import function as mem
+#Import all the packaged required the function of the package
+import os
+from binance.client import Client
 import pandas as pd
-import matplotlib.pyplot as plt
-#Use the function to download the binance data
-binance_data = mem.retrieve_binance_data(mem.create_interval('1/21/2017', 1745))
+from MeM_package import function as mem
+from datetime import datetime
+# Here API key from private binance account
+binance_api = "" 
+# Here secrete key from private binance account
+secrete_key = ""
+#Set account
+api_key = os.environ.get(binance_api)
+#Set account
+api_secret = os.environ.get(secrete_key)
+#Create connection
+client = Client(api_key, api_secret)
+#use the custom function to transform timestamp
+timestamp = mem.create_timestamp('1/21/2017')
+#Call the Binance data to download the data
+binance_data = client.get_historical_klines('BTCUSDT', #symbol
+                                            '1d', #interval
+                                            timestamp, #start interval
+                                            limit=1000)#Api Limit
 #Create the Pandas df
 df_binance = pd.DataFrame(binance_data)
-#Transform the timestamp of the df on a gregorian data
-df_binance[0] = pd.to_datetime(df_binance[0], unit='ms')
-#Rename the coulmn
+#Rename the coloumns
 df_binance = df_binance.rename(columns={0 : 'Open time',
                                         1 : 'Open', 
                                         2 : 'High', 
@@ -21,11 +36,10 @@ df_binance = df_binance.rename(columns={0 : 'Open time',
                                         9 : 'Taker buy base asset volume', 
                                         10 : 'Taker buy quote asset volume', 
                                         11:'Ignore'})
-#Set the data as index
-df_binance_data_as_index = df_binance.set_index("Open time")
-#Create the plot
-df_binance_data_as_index['Open'].astype(float).plot(linewidth=0.5)
-#Save the plot
-plt.savefig('Data/BTCUSDT_binace_plot.png')
-#Save the df as csv
+#Transform the timestamp into data
+df_binance['Open time'] = pd.to_datetime(df_binance['Open time'], unit="ms")
+#Transform the timestamp into data
+df_binance['Close time'] = pd.to_datetime(df_binance['Close time'], unit="ms")
+#Save the CSV
 df_binance.to_csv("Data/binance_data.csv")
+

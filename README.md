@@ -15,9 +15,7 @@ It also require an account in order to generate the API Key
 ## Documentation 
 Documentation can be found in: ```docs/html/index.html``` and provides infos about the functions you can find in the various modules.
  
-To read them with your **default browser**, from the main folder use ```$ open docs/html/index.html``` or, for other browsers you may have installed, follow these examples:
-- **Chrome:** ```$ open -a "Google Chrome" docs/html/index.html```
-- **Safari:** ```$ open -a "Safari" docs/html/index.html```
+You can read them with your **default browser**.
 
 
 **DOCUMENTATION MADE WITH: [Sphinx](http://www.sphinx-doc.org/en/master/).**

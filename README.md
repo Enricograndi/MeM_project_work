@@ -32,14 +32,14 @@ The data will be saved as CSV on "Data" folder.
 
 ## Data explaination
 
-In this documentation there are ten variables and 48652 records which describe the Bitcoin trend in dollars from August 1, 2017 to October 1, 2021. Data are written in the form of klines, also known as Candlestick, that packs a lot of trade history information into a single data point.
+In this documentation there are twelve variables and 1543 records which describe the Bitcoin trend in dollars from August 8th, 2017 to November 6th, 2021. Data are written in the form of klines, also known as Candlestick, that packs a lot of trade history information into a single data point.
 
 - Open time:	the starting interval time that you set when you retrieve data.
-- Open: the value the data acquires at the beginning of the day. 
-- High:	the maximum value the data acquires at the beginning of the day.
-- Low: the lowest value the data acquires at the beginning of the day.
-- Close:  the value the data acquires at the end of the day.
-- Volume: the volume of the transaction.
+- Open: the value the data acquires at open time. 
+- High:	the maximum value the data acquires during the day.
+- Low: the lowest value the data acquires during the day.
+- Close:  the value the data acquires at close time.
+- Volume: the volume of the transactions.
 - Close time:	the closing interval time that you set when you retrieve data.
 - Quote asset volume: the quantity that is traded at the quoted price.
 - Number of trades:the number of Bitcoins processed on a single day.

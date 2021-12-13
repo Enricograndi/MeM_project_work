@@ -71,3 +71,46 @@ input("Press Enter to continue...")
 
 fig.suptitle("Boxplot", fontsize=16)
 plt.show()
+
+#declare the figure
+fig = plt.figure(figsize=(10,6))
+#Fit function : y = mx + c [linear regression ]
+ax = fig.add_axes([0,0,1,1])
+
+#linear regression
+x = np.arange(df_binance["Open time"].size)
+fit = np.polyfit(x, df_binance["Open"], deg=1)
+
+fit_function = np.poly1d(fit)
+#Linear regression plot
+ax.plot(df_binance["Open time"], fit_function(x))
+ax.plot(df_binance["Open time"],df_binance["Open"], color="blue")
+
+#linear regression grade 3
+x = np.arange(df_binance["Open time"].size)
+fit = np.polyfit(x, df_binance["Open"], deg=3)
+fit_function = np.poly1d(fit)
+#Linear regression plot
+ax.plot(df_binance["Open time"], fit_function(x))
+#Real Values plot
+ax.plot(df_binance["Open time"],df_binance["Open"], color="green")
+
+
+
+# Set the x-axis values
+dtFmt = mdates.DateFormatter('%Y-%m') # define the formatting
+plt.gca().xaxis.set_major_formatter(dtFmt) # apply the format to the desired axis
+#Set the legend
+ax.legend(['Real Value','Regression line grade 1', 'Regression line grade 3'])
+#Set x-y labels
+plt.xlabel("Date")
+plt.ylabel("BTC opening values")
+
+text = ("Here we find some different timeseries, the first with two different regression lines. One regression line has degree 1 Anohter regression line has degree 3 which fit better the distribution of the data")
+print(text) 
+input("Press Enter to continue...")
+print("")
+print ("Regression line grade 1 Slope : " + str(fit[0]))
+print ("Regression line grade 1 Intercept : " + str(fit[1]))
+ax.set_title("Time series of the BTC values")
+plt.show()

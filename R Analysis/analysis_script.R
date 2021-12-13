@@ -138,3 +138,10 @@ o1<- ord_df %>% filter(country == c("French_Polynesia", "Australia")) %>%
   theme_bw() +
   theme(legend.position = "bottom")
 o1
+
+#COMPARISON DEATHS AND CASES FOR COUNTRIES 
+cowplot:: plot_grid(c,c1, nrow=2, ncol=1)
+cowplot:: plot_grid(o,o1, nrow=2, ncol=1)
+cowplot:: plot_grid(a,a1, nrow=2, ncol=1)
+cowplot:: plot_grid(us,us1, nrow=2, ncol=1)
+cowplot:: plot_grid(e,e1, nrow=2, ncol=1)

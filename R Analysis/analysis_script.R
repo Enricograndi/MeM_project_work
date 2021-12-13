@@ -1,7 +1,7 @@
 library(ggplot2)
 library(dplyr)
 library(magrittr)
-df <- read.delim("/Users/martina/Desktop/covid.csv", sep=";")
+df <- read.delim("Data//covid.csv", sep=";")
 
 #ordering dataset and formatting dates 
 ord_df<- df[order(as.Date(df$date, format="%d/%m/%Y")),]

@@ -204,3 +204,22 @@ print(text)
 input("Press Enter to continue...")
 ax.set_title("Daily percentage")
 plt.show()
+
+# calculate the correlation matrix
+corr = df_binance.corr()
+
+# plot the heatmap
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+text = ("In order to show the corellation between columns, show the heatmap with seaborn.")
+print(text) 
+input("Press Enter to continue...")
+ax.set_title("Correlation Matrix")
+plt.show()
+
+text = ("# How much was it possible to earn?")
+print(text) 
+input("Press Enter to continue...")
+calculator(1000,"2017-08-17","2021-08-17")#1/df_binance["Open"][0]

@@ -183,3 +183,24 @@ print(text)
 input("Press Enter to continue...")
 ax.set_title("Time series of the BTC Number of trades and Volume")
 plt.show()
+
+#declare the figure
+fig = plt.figure(figsize=(10,6))
+ax = fig.add_axes([0,0,1,1])
+
+#Plot normalized values
+ax.plot(df_binance["Open time"],df_binance["Percentual Increase(Open close)"], color="green")
+ax.plot(df_binance["Open time"],df_binance["Percentual Increase(High low)"], color="blue")
+
+#Set the lables
+dtFmt = mdates.DateFormatter('%Y-%m') # define the formatting
+plt.gca().xaxis.set_major_formatter(dtFmt) # apply the format to the desired axis
+ax.legend(['% Open value and close value', "% Max value - Min Value"])
+plt.xlabel("Date")
+plt.ylabel("% increase")
+
+text = ("Here we find the timeseries, of the percentage difference between the open and close, and High and low values")
+print(text) 
+input("Press Enter to continue...")
+ax.set_title("Daily percentage")
+plt.show()

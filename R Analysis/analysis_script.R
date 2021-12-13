@@ -73,3 +73,35 @@ o<- ord_df %>% filter(country == c("French_Polynesia", "Australia")) %>%
   theme_bw() +
   theme(legend.position = "bottom")
 o
+
+#DEATHS
+ord_df %>% filter(continent == "Asia") %>% 
+  ggplot(aes(x = date, y = deaths, color = country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+#we focus on China and India 
+c1<- ord_df %>% filter(country == c("China", "India")) %>% 
+  ggplot(aes(x = date, y = deaths, color=country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+c1
+
+#plot of Europe 
+ord_df %>% filter(continent == "Europe") %>% 
+  ggplot(aes(x = date, y = deaths, color = country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+#plot of France, Italy and Spain 
+e1<- ord_df %>% filter(country == c("Italy", "France", "Spain"))%>% 
+  ggplot(aes(x = date, y = deaths, color=country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+e1
+
+#plot of Africa
+ord_df %>% filter(continent == "Africa") %>% 
+  ggplot(aes(x = date, y = deaths, color = country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")

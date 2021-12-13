@@ -162,3 +162,24 @@ print(text)
 input("Press Enter to continue...")
 ax.set_title("Time series of the BTC open and Number of trades")
 plt.show()
+
+#declare the figure
+fig = plt.figure(figsize=(10,6))
+ax = fig.add_axes([0,0,1,1])
+
+#Plot normalized values
+ax.plot(df_binance["Open time"],df_binance["Number of trades"]/max(df_binance["Number of trades"]), color="red")
+ax.plot(df_binance["Open time"],df_binance["Volume"]/max(df_binance["Volume"]), color="green")
+
+#Set the lables
+dtFmt = mdates.DateFormatter('%Y-%m') # define the formatting
+plt.gca().xaxis.set_major_formatter(dtFmt) # apply the format to the desired axis
+ax.legend(["Normalized Number of trades","Normalized BTC Daiyly volumes trades"])
+plt.xlabel("Date")
+plt.ylabel("BTC Daiyly volumes trades")
+
+text = ("Here we find some different timeseries, the Number of trades and Volume. The values are normalized to the max values of the variable in order to allow to see the lines")
+print(text) 
+input("Press Enter to continue...")
+ax.set_title("Time series of the BTC Number of trades and Volume")
+plt.show()

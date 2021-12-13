@@ -105,3 +105,36 @@ ord_df %>% filter(continent == "Africa") %>%
   ggplot(aes(x = date, y = deaths, color = country)) + geom_point() + geom_line() +
   theme_bw() +
   theme(legend.position = "bottom")
+
+#plot of South Africa
+a1<- ord_df %>% filter(country == c("South_Africa", "Morocco")) %>% 
+  ggplot(aes(x = date, y = deaths, color=country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+a1
+
+#plot of America 
+ord_df %>% filter(continent == "America") %>% 
+  ggplot(aes(x = date, y = deaths, color = country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+#plot United States of America and Brazil 
+us1<- ord_df %>% filter(country == c("United_States_of_America", "Brazil")) %>% 
+  ggplot(aes(x = date, y = deaths, color=country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+us1
+
+#plot of Oceania
+ord_df %>% filter(continent == "Oceania") %>% 
+  ggplot(aes(x = date, y = deaths, color = country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+#plot of Australia and French Polynesia 
+o1<- ord_df %>% filter(country == c("French_Polynesia", "Australia")) %>% 
+  ggplot(aes(x = date, y = deaths, color=country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+o1

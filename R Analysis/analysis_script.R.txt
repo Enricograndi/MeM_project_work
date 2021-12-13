@@ -7,3 +7,30 @@ df <- read.delim("/Users/martina/Desktop/covid.csv", sep=";")
 ord_df<- df[order(as.Date(df$date, format="%d/%m/%Y")),]
 ord_df$date <- as.Date(ord_df$date,format = "%d/%m/%Y")
 format(as.Date(ord_df$date), "%m/%Y")
+
+#CASES
+#plot of Asia 2019-2020 daily cases, on y cases, on x months 
+ord_df %>% filter(continent == "Asia") %>% 
+  ggplot(aes(x = date, y = cases, color = country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+#we focus on China and India  
+c<- ord_df %>% filter(country == c("China","India")) %>% 
+  ggplot(aes(x = date, y = cases, color=country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+c
+
+#plot of Europe 
+ord_df %>% filter(continent == "Europe") %>% 
+  ggplot(aes(x = date, y = cases, color = country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+#plot of France, Italy and Spain 
+e<- ord_df %>% filter(country == c("Italy", "France", "Spain"))%>% 
+  ggplot(aes(x = date, y = cases, color=country)) + geom_point() + geom_line() +
+  theme_bw() +
+  theme(legend.position = "bottom")
+e

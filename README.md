@@ -54,6 +54,11 @@ In this documentation there are twelve variables and 1543 records which describe
 In order to download the data, you have to create your own account on Binance. Next you will have to generate
 your personal key. Finally, you have to set the keys generated on the main.py in the dedicated variable.
 
+
+## R ANALYSIS 
+In the folder "R analysis" you can find two files: "R Markdown" and "analysis_script". The first is the markdown document containing plots, images and lines of code, the second contains only the script. 
+
+
 ## Support
 You need help? Get in touch with the authors on [Linkedin](https://www.linkedin.com/)!
 

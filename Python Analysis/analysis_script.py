@@ -38,3 +38,36 @@ df_binance["Percentual Increase(High low)"] = df_binance["High-Low"]/df_binance[
 df_binance["Percentual Increase(Open close)"] = df_binance["Open-Close"]/df_binance["Open"]*100
 #drop columns
 df_binance = df_binance.drop(columns=["Unnamed: 0", "Ignore"])
+
+#declare a figure of 3 rows and 2 columns
+fig, axs = plt.subplots(3, 2,figsize=(15,15))
+
+# Read the boxplot from left to right
+# first box plot
+axs[0, 0].boxplot(df_binance["Percentual Increase(High low)"])
+axs[0, 0].set_title('Percentual Increase(High low)')
+
+# second boxplot
+axs[0, 1].boxplot(df_binance["Percentual Increase(Open close)"], 1)
+axs[0, 1].set_title('Percentual Increase(Open close)')
+
+# third boxplot
+axs[1, 0].boxplot(df_binance["Open"], 1)
+axs[1, 0].set_title('Open')
+
+# fourth boxplot
+axs[1, 1].boxplot(df_binance["Close"], 1)
+axs[1, 1].set_title('Close')
+
+# fifth boxplot
+axs[2, 0].boxplot(df_binance["High"], 1)
+axs[2, 0].set_title('High')
+# sixt boxplot
+axs[2, 1].boxplot(df_binance["Low"], 1)
+axs[2, 1].set_title('Low')
+
+print("In order to understand the shape of the data, we are going to plot the boxplot of the most important coulmns. We can see that for all the columns there are a lot of outliers, meawhile the median values are equally distributed to the bottom of the boxplots.") 
+input("Press Enter to continue...")
+
+fig.suptitle("Boxplot", fontsize=16)
+plt.show()

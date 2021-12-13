@@ -59,7 +59,7 @@ your personal key. Finally, you have to set the keys generated on the main.py in
 In the folder "R analysis" you can find two files: "R Markdown" and "analysis_script". The first is the markdown document containing plots, images and lines of code, the second contains only the script. 
 
 ## data explaination
-The dataset "covid.csv" used for the second task of the project can be found in the folder "Data". This dataset is about Covid-19 pandemic going from 31/12/2019 to 14/12/2020 and has 12 variables: 
+The dataset "covid.csv" used for the second task of the project can be found in the folder "Data". The dataset concerns 61900 observations about Covid-19 pandemic going from 31/12/2019 to 14/12/2020 and has 12 variables: 
 - date, 
 - day, 
 - month, 
